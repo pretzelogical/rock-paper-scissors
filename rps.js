@@ -1,4 +1,4 @@
-function computerPlay() {
+function getComputerInput() {
     let decide = Math.floor(Math.random()*3)
     //advanced ai
     if (decide === 0) {return 'rock'}
@@ -6,7 +6,7 @@ function computerPlay() {
     else {return 'scissors'}
 }
 
-function playerInput(input){
+function getPlayerInput(input){
     const sString = input.toLowerCase()
     if (sString === 'rock' || sString === 'paper' 
     || sString === 'scissors'){
@@ -14,41 +14,41 @@ function playerInput(input){
     }
 }
 
-function whoWon(victor, loser, op1, op2){
+function getWin(victor, loser, op1, op2){
     return `${victor} is the victor! beating ${loser} with ${op1} over ${op2}.`
 }
 
 
 function playRound(pinput){
-    let pDecide = playerInput(pinput)
-    let cDecide = computerPlay()
+    let pDecide = getPlayerInput(pinput)
+    let cDecide = getComputerInput()
     if (pDecide === cDecide)
     {
       return `${pDecide} and ${cDecide} clash!`
     }
     else if (pDecide === 'rock' && cDecide === 'scissors')
     {
-      return whoWon('player', 'computer', pDecide, cDecide)
+      return getWin('player', 'computer', pDecide, cDecide)
     }
     else if (pDecide === 'scissors' && cDecide === 'rock')
     {
-      return whoWon('computer', 'player', pDecide, cDecide)
+      return getWin('computer', 'player', pDecide, cDecide)
     }
     else if (pDecide === 'paper' && cDecide === 'rock')
     {
-      return whoWon('player', 'computer', pDecide, cDecide)
+      return getWin('player', 'computer', pDecide, cDecide)
     }   
     else if (pDecide === 'rock' && cDecide === 'paper')
     {
-      return whoWon('computer', 'player', pDecide, cDecide)
+      return getWin('computer', 'player', pDecide, cDecide)
     }
     else if (pDecide === 'scissors' && cDecide === 'paper')
     {
-      return whoWon('player', 'computer', pDecide, cDecide)
+      return getWin('player', 'computer', pDecide, cDecide)
     }
     else if (pDecide === 'paper' && cDecide === 'scissors')
     {
-      return whoWon('player', 'computer', pDecide, cDecide)
+      return getWin('player', 'computer', pDecide, cDecide)
     }
     else return 'error!'
 

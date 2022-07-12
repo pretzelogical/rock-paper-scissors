@@ -23,25 +23,37 @@ function whoWon(victor, loser, op1, op2){
 function playRound(pinput){
     let pDecide = playerInput(pinput)
     let cDecide = computerPlay()
-    console.log(pDecide, cDecide)
-
     if (pDecide === cDecide)
-    {return `${pDecide} and ${cDecide} clash!`}
+    {
+      return `${pDecide} and ${cDecide} clash!`
+    }
     else if (pDecide === 'rock' && cDecide === 'scissors')
-    {return whoWon('player', 'computer', pDecide, cDecide)}
+    {
+      return whoWon('player', 'computer', pDecide, cDecide)
+    }
     else if (pDecide === 'scissors' && cDecide === 'rock')
-    {return whoWon('computer', 'player', pDecide, cDecide)}
+    {
+      return whoWon('computer', 'player', pDecide, cDecide)
+    }
     else if (pDecide === 'paper' && cDecide === 'rock')
-    {return whoWon('player', 'computer', pDecide, cDecide)}
+    {
+      return whoWon('player', 'computer', pDecide, cDecide)
+    }   
     else if (pDecide === 'rock' && cDecide === 'paper')
-    {return whoWon('computer', 'player', pDecide, cDecide)}
+    {
+      return whoWon('computer', 'player', pDecide, cDecide)
+    }
     else if (pDecide === 'scissors' && cDecide === 'paper')
-    {return whoWon('player', 'computer', pDecide, cDecide)}
+    {
+      return whoWon('player', 'computer', pDecide, cDecide)
+    }
     else if (pDecide === 'paper' && cDecide === 'scissors')
-    {return whoWon('player', 'computer', pDecide, cDecide)}
+    {
+      return whoWon('player', 'computer', pDecide, cDecide)
+    }
     else return 'error!'
 
-}
+    }
 
 function game(rounds){
     for (let i = 0; i < rounds; i++){

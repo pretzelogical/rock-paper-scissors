@@ -1,6 +1,5 @@
 function computerPlay() {
     let decide = Math.floor(Math.random()*3)
-    console.log(decide)
     //advanced ai
     if (decide === 0) {return 'rock'}
     else if (decide === 1) {return 'paper'}
